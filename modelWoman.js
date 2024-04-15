@@ -3,19 +3,19 @@ const mongoose = require('mongoose');
 const schemeWoman = new mongoose.Schema({
     name:{
         type: String,
-        require: true,
+        required: true,
         },
     image:{
         type: String,
-        require: true,
+        required: true,
         },
     minibio:{
         type: String,
-        require: true,
+        required: true,
         },
     quote:{
         type: String,
-        require: true,
+        required: true,
         }
     
 })
