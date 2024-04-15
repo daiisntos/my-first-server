@@ -15,5 +15,5 @@ function showWoman(request, response){
 function showDoor() {
     console.log("Server created and running on the port:", door);
 }
-app.use(router.get('./woman',showWoman))
+app.use(router.get('/woman',showWoman));
 app.listen(door, showDoor);

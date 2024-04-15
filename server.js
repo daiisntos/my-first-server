@@ -1,10 +1,10 @@
 const express = require("express");
 
 const app = express();
-const porta = 3333;
+const door = 3333;
 
-function mostraPorta() {
-    console.log("Servidor criado e rodando na porta", porta);
+function showDoor() {
+    console.log("Server created and running on the port:", door);
 }
 
-app.listen(porta, mostraPorta);
+app.listen(door, showDoor);

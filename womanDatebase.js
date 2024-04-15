@@ -3,7 +3,7 @@ require('dotenv').config();
 
 async function connectingTheDatabase(){
    try {
-    console.log('Database connection started');
+    console.log('Database connection started.');
 
     await mongoose.connect(process.env.MONGO_URL);
      
