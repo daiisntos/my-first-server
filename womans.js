@@ -6,7 +6,9 @@ const cors = require('cors');
 
 
 const  connectingTheDatabase = require('./womanDatebase');
+
 connectingTheDatabase();
+
 const Woman = require('./modelWoman');
 
 const app = express();
@@ -23,9 +25,7 @@ try {
     response.json(womenComingFromTheDatabase);
 } catch (erro) {
     console.log(erro);
-}
-response.json();
-    
+} 
 
 }
 
@@ -80,16 +80,16 @@ async function deleteWoman(request, response) {
     }
 }   
 
+
+app.use(router.get('/womans', showsWomans));
+app.use(router.post('/womans', createsWomans));
+app.use(router.patch('/womans/:id', correctWoman));
+app.use(router.delete('/womans/:id', deleteWoman));
+
 function showDoor() {
 
     console.log("Server created and running on Port:", door);
 
 }
 
-
-
-app.use(router.get('/womans', showsWomans));
-app.use(router.post('/womans', createsWomans));
-app.use(router.patch('/womans/:id', correctWoman));
-app.use(router.delete('/womans/:id', deleteWoman));
 app.listen(door, showDoor);
